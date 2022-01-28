@@ -1,10 +1,16 @@
+:root {
+  --cor-primaria: #7E55BF;
+  --cor-hover: #a085e0;
+
+  --cor-fundo: #121214;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
 }
 
 body {
-  background: #121214;
   background: url("./img/floral.png");
   display: flex;
   flex-direction: column;
@@ -24,7 +30,7 @@ body {
 .nome {
   margin: 0;
   font-size: 5rem;
-  color: #7E55BF;
+  color: var(--cor-primaria);
 }
 
 .titulo {
@@ -49,6 +55,8 @@ body {
 
 .social-link {
   --transition-time: 300ms;
+
+  color: var(--cor-primaria);
   text-decoration: none;
   transition: 
   color var(--transition-time) ease,
@@ -56,7 +64,7 @@ body {
 }
 
 .social-link:hover {
-  color: hsl(263, 50%, 60%);
+  color: var(--cor-hover);
   transform: translateY(-3px);
   cursor: url("./img/external.svg"), pointer;
 }
