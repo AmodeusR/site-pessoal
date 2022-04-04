@@ -1,0 +1,46 @@
+:root {
+  --cor-tema: linear-gradient(15deg, rgba(100,22,156,1) 20%, rgba(215,10,132,1) 100%);
+  --cor-fundo-400: #131316;
+  --cor-fundo-500: #1C1C22;
+  --cor-fundo-600: #2E2E38;
+  --cor--borda: #2E2E38;
+
+  --cor-neutra-400: #636A74;
+  --cor-neutra-600: #AFB6C0;
+
+  --gradiente-origem: #64169C;
+  --gradiente-remate: #D70A84;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Outfit", "Noto Sans JP", sans-serif;
+  margin: 0;
+
+  background-color: var(--cor-fundo-400);
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.outer-container {
+  max-width: 75%;
+  margin-inline: auto;
+}
+
+.inner-container {
+  max-width: 70%;
+  margin-inline: auto;
+}
