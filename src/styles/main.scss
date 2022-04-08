@@ -25,8 +25,8 @@ html {
 body {
   font-family: "Outfit", "Noto Sans JP", sans-serif;
   margin: 0;
-
   background-color: var(--cor-fundo-400);
+  color: white;
 }
 
 img {
@@ -36,11 +36,20 @@ img {
 }
 
 .outer-container {
-  max-width: 75%;
   margin-inline: auto;
+  max-width: 90%;
+  // max-width: 75%;
 }
 
 .inner-container {
-  max-width: 70%;
   margin-inline: auto;
+  max-width: 85%;
+  // max-width: 70%;
+}
+
+.theme-color {
+  background-image: var(--cor-tema);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
