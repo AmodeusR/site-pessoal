@@ -1,0 +1,31 @@
+.close-menu {
+  position: relative;
+  transform: rotate(45deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  
+  
+  .line {
+    position: absolute;
+    background-color: var(--cor-neutra-400);
+    border-radius: 2rem;
+    width: 23px;
+    height: 3px;
+    transition: background-color 200ms ease;
+    
+  }
+  
+  .line-2 {
+    transform: rotate(90deg);
+  }
+
+  &:hover {
+    cursor: pointer;
+    .line {
+      background-color: crimson;
+    }
+  }
+}
