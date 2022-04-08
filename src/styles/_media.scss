@@ -1,0 +1,8 @@
+
+
+@mixin mobile {
+  @media (min-width: 400px) {
+    @content;
+
+  }
+}
