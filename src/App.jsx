@@ -1,11 +1,12 @@
-import { Navigation } from "./components";
+import { Navigation, HeroSection } from "./components";
 
 function App() {
 
   return (
-    <div className="App">
+    <>
       <Navigation />
-    </div>
+      <HeroSection />
+    </>
   );
 }
 
