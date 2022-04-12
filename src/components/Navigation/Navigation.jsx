@@ -35,10 +35,10 @@ const Navigation = () => {
               <span className="list-title menu-header__title">Menu</span>
               <MobileCloseMenuIcon />
             </div>
-            <li className="header__list-items"><a href="#" className="header__link">Início</a></li>
-            <li className="header__list-items"><a href="#" className="header__link">Sobre Mim</a></li>
-            <li className="header__list-items"><a href="#" className="header__link">Projetos</a></li>
-            <li className="header__list-items"><a href="#" className="header__link">Contato</a></li>
+            <li className="header__list-items"><a href="#home" className="header__link">Início</a></li>
+            <li className="header__list-items"><a href="#about-me" className="header__link">Sobre Mim</a></li>
+            <li className="header__list-items"><a href="#projects" className="header__link">Projetos</a></li>
+            <li className="header__list-items"><a href="#contact" className="header__link">Contato</a></li>
           </ul>
         </nav>
       </div>
