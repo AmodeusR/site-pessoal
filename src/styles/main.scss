@@ -27,6 +27,7 @@ body {
   margin: 0;
   background-color: var(--cor-fundo-400);
   color: white;
+  margin-bottom: 100rem;
 }
 
 img {
@@ -47,9 +48,19 @@ img {
   // max-width: 70%;
 }
 
-.theme-color {
+.theme-container {
   background-image: var(--cor-tema);
+  background-color: white;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+}
+
+.theme-neutralize {
+  color: white;
+}
+
+// h2 style
+.section-title {
+  font-size: clamp(2.5rem, 6vw, 4rem);
 }
