@@ -1,5 +1,6 @@
 import { ReactComponent as Logo} from "../assets/icons/logo.svg";
 import { ReactComponent as DownloadIcon} from "../assets/icons/download.svg";
+import { ReactComponent as ArrowIcon} from "../assets/icons/arrow.svg";
 
 import { ReactComponent as FigmaIcon} from "../assets/icons/apps/figma.svg";
 import { ReactComponent as IllustratorIcon} from "../assets/icons/apps/illustrator.svg";
@@ -16,6 +17,7 @@ import { ReactComponent as SassIcon} from "../assets/icons/techs/sass.svg";
 export default {
   Logo,
   DownloadIcon,
+  ArrowIcon,
   FigmaIcon,
   IllustratorIcon,
   PhotoshopIcon,

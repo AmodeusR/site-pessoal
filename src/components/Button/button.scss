@@ -50,4 +50,16 @@
       }
     }
   }
+
+  &--disabled {
+    --color-disabled: var(--cor-neutra-400);
+    cursor: none;
+    pointer-events: none;
+    color: var(--color-disabled);
+    outline-color: var(--color-disabled);
+
+    svg {
+      fill: var(--color-disabled);
+    }
+  }
 }
