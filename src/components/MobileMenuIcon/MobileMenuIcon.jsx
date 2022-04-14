@@ -1,13 +1,13 @@
 import "./mobile-menu.scss";
 
-const MobileMenuIcon = () => {
+const MobileMenuIcon = ({ onClick }) => {
   return (
     <>
-      <div className="mobile-menu" data-type="mobile-menu">
-        <div className="mobile-menu__top-line" data-type="mobile-menu" />
-        <div className="mobile-menu__middle-line" data-type="mobile-menu" />
-        <div className="mobile-menu__bottom-line" data-type="mobile-menu" />
-      </div>
+      <button onClick={onClick} className="mobile-menu">
+        <div className="mobile-menu__top-line"  />
+        <div className="mobile-menu__middle-line"  />
+        <div className="mobile-menu__bottom-line"  />
+      </button>
     </>
   );
 };
