@@ -17,9 +17,10 @@ const AboutMeCard = () => {
         minus.
       </p>
       <Button
-        className="button--hollow button--disabled about-card__button"
+        className="button--hollow about-card__button"
         title="Mais sobre mim"
         type="arrow"
+        disabled
       />
     </div>
   );
