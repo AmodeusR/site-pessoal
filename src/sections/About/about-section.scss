@@ -1,7 +1,18 @@
 .about {
+
+}
+
+.about-card {
+  align-self: center;
 }
 
 .about-grid {
-  display: grid;
-  place-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.knowledge {
+
+  &__title {
+  }
 }
