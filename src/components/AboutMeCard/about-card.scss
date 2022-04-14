@@ -12,6 +12,7 @@
   &__img {
     border-radius: var(--border-radius);
     aspect-ratio: 1 / 1;
+    object-fit: cover;
   }
 
   --p-margin: .4rem;
