@@ -27,7 +27,8 @@
     transition: fill 250ms ease;
   }
   
-  &:hover {
+  &:hover,
+  &:focus {
     cursor: pointer;
     background: lighten(#811dc9, 12%);
   }
@@ -39,7 +40,8 @@
     outline: 2px solid var(--cor-neutra-600);
     outline-offset: -2px;
     
-    &:hover {
+    &:hover,
+    &:focus {
       --hover-color: white;
       background: transparent;
       outline-color: var(--hover-color);
