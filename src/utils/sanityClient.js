@@ -12,3 +12,13 @@ export const client = sanityClient({
 const builder = imageUrlBuilder(client);
 
 export const urlFor = (source) => builder.image(source);
+
+const sanityFetch = async (dataType) => {
+  const query = `*[_type == "${dataType}"]`;
+  
+  const data = client.fetch(query);
+
+  return data;
+};
+
+export default sanityFetch;
