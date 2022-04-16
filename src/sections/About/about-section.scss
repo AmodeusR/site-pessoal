@@ -31,11 +31,11 @@
   &__techs-list,
   &__apps-list {
     display: flex;
-    gap: .6rem;
+    gap: .8rem;
     flex-wrap: wrap;
 
     img {
-      width: clamp(48px, 7vw, 96px);
+      width: clamp(48px, 6vw, 64px);
     }
   }
 }
