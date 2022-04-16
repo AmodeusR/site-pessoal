@@ -1,31 +1,28 @@
-// import { useState, useEffect } from "react";
-// import { urlFor, client } from "../../../utils/sanityClient";
+import { useState, useEffect } from "react";
+import sanityFetch from "../../../utils/sanityClient";
+import { Icon } from "../../../components";
 
 const Knowledge = () => {
-  // const [techs, setTechs] = useState([]);
-  // useEffect(() => {
-  //   const query = "*[_type == 'techs']";
-  //   const fetchData = async () => {
-  //     try {
-  //       const data = await client.fetch(query);
-  //       console.log(data);
-  //       setTechs(data);
-        
-  //     } catch (error) {
-  //       console.warn(error);
-  //     }
-  //   };
+  const [techs, setTechs] = useState([]);
 
-  //   fetchData();
-  // }, []);
+  useEffect(() => {
 
-  const data = [
-    {image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"},
-    {image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"},
-    {image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"},
-    {image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"},
-    {image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"}
-  ];
+    (async () => {
+      const data = await sanityFetch("techs");
+      setTechs(data);
+
+    })();
+
+  }, []);
+
+
+  // const techs = [
+  //   {image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"},
+  //   {image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"},
+  //   {image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"},
+  //   {image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"},
+  //   {image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"}
+  // ];
 
   return (
     <section className="knowledge inner-container">
@@ -34,16 +31,16 @@ const Knowledge = () => {
         <div className="knowledge__techs-container">
           <h4 className="section-subtitle-l2">Tecnologias</h4>
           <div className="knowledge__techs-list">
-            {data.map((item, i) => (
-              <img src={item.image} alt="teste" key={i} />
+            {techs?.map((item) => (
+              <Icon key={item.technology} src={item.image} alt={item.technology} />
             ))}
           </div>
         </div>
         <div className="knowledge__apps-container">
           <h4 className="section-subtitle-l2">Programas</h4>
           <div className="knowledge__apps-list">
-            {data.map((item, i) => (
-              <img src={item.image} alt="teste" key={i} />
+            {techs?.map((item) => (
+              <Icon key={item.technology} src={item.image} alt={item.technology} />
             ))}
 
           </div>
