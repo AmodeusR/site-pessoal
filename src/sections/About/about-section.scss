@@ -1,18 +1,41 @@
+@use "/src/styles/media";
+
 .about {
 
 }
 
 .about-card {
-  align-self: center;
+  margin-inline: auto;
 }
 
-.about-grid {
-  display: flex;
-  flex-direction: column;
-}
 
 .knowledge {
 
-  &__title {
+  h4 {
+    margin-top: 0;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin-inline: auto;
+    gap: 3rem;
+
+    @include media.tablet {
+      flex-direction: row;
+    }
+  }
+
+  &__techs-list,
+  &__apps-list {
+    display: flex;
+    gap: .6rem;
+    flex-wrap: wrap;
+
+    img {
+      width: clamp(48px, 7vw, 96px);
+    }
   }
 }
