@@ -14,7 +14,7 @@ const builder = imageUrlBuilder(client);
 export const urlFor = (source) => builder.image(source);
 
 const sanityFetch = async (dataType) => {
-  const query = `*[_type == "${dataType}"]`;
+  const query = `*[_type == "${dataType}"] | order(order asc)`;
   
   const data = client.fetch(query);
 
