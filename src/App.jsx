@@ -1,5 +1,5 @@
 import { Navigation } from "./components";
-import { Hero, About } from "./sections";
+import { Hero, About, Projects } from "./sections";
 
 function App() {
 
@@ -8,6 +8,7 @@ function App() {
       <Navigation />
       <Hero />
       <About />
+      <Projects />
     </>
   );
 }
