@@ -10,6 +10,7 @@
     .overlay {
       visibility: visible;
       opacity: 1;
+      z-index: 2;
     }
 
     .header__list {
@@ -43,10 +44,8 @@
     transition: 
       transform 250ms ease-out,
       visibility 250ms ease-out;
-    z-index: 3;
+    z-index: 10;
     padding-inline: calc(0.7rem + 2vw) calc(1rem + 2vw);
-
-    // gap: .6rem;
 
     // colored border
     &::after {
