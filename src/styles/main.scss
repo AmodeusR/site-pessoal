@@ -3,7 +3,7 @@
   --cor-fundo-400: #131316;
   --cor-fundo-500: #1C1C22;
   --cor-fundo-600: #2E2E38;
-  --cor--borda: #2E2E38;
+  --cor-borda: #2E2E38;
 
   --cor-neutra-400: #636A74;
   --cor-neutra-600: #AFB6C0;
@@ -39,6 +39,7 @@ img {
 .outer-container {
   margin-inline: auto;
   max-width: 90%;
+  width: 73em;
   // max-width: 75%;
 }
 
@@ -62,6 +63,11 @@ img {
 // h2 style
 .section-title {
   font-size: clamp(2.5rem, 6vw, 4rem);
+
+  &::after {
+    content: "_";
+    color: var(--gradiente-origem);
+  }
 }
 
 .section-subtitle-l1 {
