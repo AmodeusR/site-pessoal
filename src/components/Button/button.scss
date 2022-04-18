@@ -64,4 +64,12 @@
       fill: var(--color-disabled);
     }
   }
+
+  &--accent {
+    background-color: var(--gradiente-remate);
+
+    &:hover {
+      background-color: lighten(#f40b97, 12%);
+    }
+  }
 }
