@@ -15,15 +15,6 @@ const Knowledge = () => {
 
   }, []);
 
-
-  // const techs = [
-  //   {image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"},
-  //   {image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"},
-  //   {image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"},
-  //   {image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"},
-  //   {image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"}
-  // ];
-
   return (
     <section className="knowledge inner-container">
       <h3 className="section-subtitle-l1">Conhecimentos</h3>
