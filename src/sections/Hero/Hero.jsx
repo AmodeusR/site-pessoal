@@ -16,7 +16,7 @@ const Hero = () => {
         <a href="#projetos" id="link-project">
           <Button title="Projetos" />
         </a>
-        <Button title="Baixar CV" className="button--hollow" type="download" />
+        <Button title="Baixar CV" className="button--hollow" icon="download" />
       </div>
     </div>
   );

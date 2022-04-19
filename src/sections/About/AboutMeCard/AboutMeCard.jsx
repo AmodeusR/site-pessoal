@@ -19,7 +19,7 @@ const AboutMeCard = () => {
       <Button
         className="button--hollow about-card__button"
         title="Mais sobre mim"
-        type="arrow"
+        icon="arrow"
         disabled
       />
     </div>

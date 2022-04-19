@@ -7,11 +7,11 @@ const { DownloadIcon, ArrowIcon } = assets;
 const Button = ({
   title,
   className = "",
-  type,
+  icon,
   disabled = false,
   ...options
 }) => {
-  const iconToRender = getIconToRender(type);
+  const iconToRender = getIconToRender(icon);
 
   return (
     <button
@@ -20,7 +20,7 @@ const Button = ({
       type="button"
       {...options}
     >
-      {type ? iconToRender : ""}
+      {icon ? iconToRender : ""}
       {title}
     </button>
   );
