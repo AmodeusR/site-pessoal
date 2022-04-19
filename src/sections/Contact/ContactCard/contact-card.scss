@@ -1,0 +1,36 @@
+@use "/src/styles/media";
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  --border-radius: 8px;
+  padding: 1rem;
+  background-color: var(--cor-fundo-500);
+  width: min(100%, 45rem);
+  border: 2px solid var(--cor-borda);
+  border-radius: var(--border-radius);
+  margin-inline: auto;
+
+  &__title {
+    text-align: center;
+    margin-inline: auto;
+    max-width: 23rem;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+
+    @include media.tablet {
+      width: 80%;
+    }
+  }
+
+  &__button {
+    margin-top: 1rem;
+  }
+}
