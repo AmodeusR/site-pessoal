@@ -23,8 +23,8 @@ const Project = () => {
         <div className="project__used-techs">
           <h3>Techs usadas</h3>
           <div className="project__list">
-            {usedTechs.map(usedTech => (
-              <img src={usedTech.image} alt="image" key={usedTech} />
+            {usedTechs.map((usedTech, i) => (
+              <img src={usedTech.image} alt="image" key={i} />
             ))}
           </div>
         </div>
