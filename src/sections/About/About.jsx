@@ -1,4 +1,4 @@
-import { AboutMeCard } from "../../components";
+import AboutMeCard from "./AboutMeCard/AboutMeCard";
 import Knowledge from "./Knowledge/Knowledge";
 
 import "./about-section.scss";

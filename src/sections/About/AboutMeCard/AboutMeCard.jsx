@@ -1,4 +1,4 @@
-import { Button } from "../../components";
+import { Button } from "../../../components";
 import "./about-card.scss";
 
 const AboutMeCard = () => {
