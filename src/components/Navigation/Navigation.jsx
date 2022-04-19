@@ -12,6 +12,12 @@ const Navigation = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const handleNavigation = (e) => {
+    const isNavLink = e.target.tagName === "A";
+
+    isNavLink ? setIsMobileMenuOpen(false) : null;
+  };
+
   return (
     <header
       className={`header ${isMobileMenuOpen ? "header--open" : ""}`}
@@ -21,7 +27,7 @@ const Navigation = () => {
         <Logo className="header__logo" />
         <nav className="header__nav">
           <MobileMenuIcon onClick={handleMenuToggle} />
-          <ul className="header__list">
+          <ul className="header__list" onClick={handleNavigation}>
             <div className="menu-header">
               <span className="list-title menu-header__title">Menu</span>
               <MobileCloseMenuIcon onClick={handleMenuToggle} />
