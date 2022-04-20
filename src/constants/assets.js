@@ -1,4 +1,5 @@
 import { ReactComponent as Logo} from "../assets/icons/logo.svg";
+import { ReactComponent as LogoGrayscale} from "../assets/icons/logo-grayscale.svg";
 import { ReactComponent as DownloadIcon} from "../assets/icons/download.svg";
 import { ReactComponent as ArrowIcon} from "../assets/icons/arrow.svg";
 
@@ -14,8 +15,13 @@ import { ReactComponent as JSIcon} from "../assets/icons/techs/javascript.svg";
 import { ReactComponent as ReactIcon} from "../assets/icons/techs/react.svg";
 import { ReactComponent as SassIcon} from "../assets/icons/techs/sass.svg";
 
+import { ReactComponent as GithubIcon} from "../assets/icons/social/github.svg";
+import { ReactComponent as LinkedinIcon} from "../assets/icons/social/linkedin.svg";
+
+
 export default {
   Logo,
+  LogoGrayscale,
   DownloadIcon,
   ArrowIcon,
   FigmaIcon,
@@ -27,5 +33,7 @@ export default {
   CSSIcon,
   JSIcon,
   ReactIcon,
-  SassIcon
+  SassIcon,
+  GithubIcon,
+  LinkedinIcon
 };
