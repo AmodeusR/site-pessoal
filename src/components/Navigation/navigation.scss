@@ -3,8 +3,9 @@
 .header {
   color: var(--cor-neutra-400);
   background: var(--cor-fundo-500);
-  position: relative;
-  // top: 0;
+  position: sticky;
+  top: 0;
+  z-index: 2;
 
   &--open {
     .overlay {
@@ -75,6 +76,31 @@
     background: var(--cor-tema);
     z-index: -1;
   }
+
+  @include media.tablet {
+    &__list {
+      // Resetting
+      visibility: visible;
+      transform: translateX(0);
+      height: initial;
+      transition: none;
+      background: none;
+
+      // Styling
+      flex-direction: row;
+      position: static;
+      // width: initial;
+      padding: 0;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    &__nav .mobile-menu {
+      display: none;
+    }
+  }
 }
 
 .header__flex {
@@ -106,5 +132,9 @@
     color: var(--cor-neutra-600);
     margin-top: -6px;
     margin-left: -0.4rem;
+  }
+
+  @include media.tablet {
+    display: none;
   }
 }

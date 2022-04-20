@@ -23,7 +23,7 @@ const Navigation = () => {
       className={`header ${isMobileMenuOpen ? "header--open" : ""}`}
     >
       <div className="overlay" />
-      <div className="inner-container header__flex">
+      <div className="outer-container header__flex">
         <Logo className="header__logo" />
         <nav className="header__nav">
           <MobileMenuIcon onClick={handleMenuToggle} />
