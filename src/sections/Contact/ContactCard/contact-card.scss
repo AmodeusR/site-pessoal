@@ -15,7 +15,7 @@
 
   &__title {
     text-align: center;
-    margin-inline: auto;
+    margin: 1rem auto;
     max-width: 23rem;
   }
 
@@ -31,6 +31,6 @@
   }
 
   &__button {
-    margin-top: 1rem;
+    margin-block: 1rem;
   }
 }
