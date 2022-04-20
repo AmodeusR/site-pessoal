@@ -20,7 +20,7 @@
 
   &__cta {
     display: flex;
-    width: 100%;
+    width: min(100%, 28rem);
     gap: 2rem;
   }
 }

@@ -3,7 +3,7 @@ import { Button } from "../../components";
 
 const Hero = () => {
   return (
-    <div className="outer-container hero" id="home">
+    <main className="outer-container hero" id="home">
       <h1 className="hero__title theme-container">
         Front-end <span className="theme-neutralize">Dev &</span><br /> UI/UX{" "}
         <span className="theme-neutralize">Designer</span>
@@ -14,11 +14,11 @@ const Hero = () => {
       </span>
       <div className="hero__cta">
         <a href="#projetos" id="link-project">
-          <Button title="Projetos" />
+          <Button title="Projetos" onClick={() => document.getElementById("projects").scrollIntoView()} />
         </a>
-        <Button title="Baixar CV" className="button--hollow" icon="download" />
+        <Button title="Baixar CV" className="button--hollow" icon="download" onClick={() => window.open("https://bit.ly/CurriculumAR", "_blank")} />
       </div>
-    </div>
+    </main>
   );
 };
 
