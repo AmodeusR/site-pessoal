@@ -27,7 +27,6 @@ body {
   margin: 0;
   background-color: var(--cor-fundo-400);
   color: white;
-  margin-bottom: 10rem;
 }
 
 img {
@@ -60,9 +59,15 @@ img {
   color: white;
 }
 
+section + section {
+  margin-block: 4rem;
+}
+
 // h2 style
 .section-title {
   font-size: clamp(2.5rem, 6vw, 4rem);
+  margin-top: -3rem;
+  padding-top: 5rem;
 
   &::after {
     content: "_";
@@ -76,4 +81,9 @@ img {
 
 .section-subtitle-l2 {
   font-size: clamp(1.4rem, 3vw, 2rem);
+}
+
+::selection {
+  background: var(--gradiente-remate);
+  color: white;
 }
