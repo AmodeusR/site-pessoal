@@ -36,14 +36,7 @@
 
     img {
       width: clamp(48px, 6vw, 64px);
+      height: clamp(48px, 6vw, 64px);
     }
-  }
-
-  &__techs-list {
-      // Selecting HTML and CSS Icons to normalize its size
-      img:nth-of-type(-n + 2) {
-        width: initial;
-        height: clamp(56px, 6vw, 72px);
-      }
   }
 }
