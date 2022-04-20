@@ -1,5 +1,5 @@
 import { Navigation } from "./components";
-import { Hero, About, Projects, Contact } from "./sections";
+import { Hero, About, Projects, Contact, Footer } from "./sections";
 
 function App() {
 
@@ -10,6 +10,7 @@ function App() {
       <About />
       <Projects />
       <Contact />
+      <Footer />
     </>
   );
 }
