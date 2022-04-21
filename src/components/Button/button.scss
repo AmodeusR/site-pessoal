@@ -68,7 +68,8 @@
   &--accent {
     background-color: var(--gradiente-remate);
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: lighten(#f40b97, 12%);
     }
   }
