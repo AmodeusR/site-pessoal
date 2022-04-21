@@ -25,8 +25,9 @@
 
   &:hover {
     cursor: pointer;
+    
     .line {
-      background-color: crimson;
+      background-color: var(--cor-neutra-600);
     }
   }
 }
