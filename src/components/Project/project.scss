@@ -6,10 +6,29 @@
   position: relative;
   overflow: hidden;
   border-radius: 8px;
+  position: relative;
+  transition: all 250ms ease;
+
+  &__background-image {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: transform 250ms ease;
+  }
+  --scale-value: 1.1;
+  &:hover &__background-image {
+    cursor: pointer;
+    transform: scale(var(--scale-value));
+  }
   
-  &:hover {
+  &.active {
     .project__overlay {
       transform: translateX(0);
+    }
+
+    .project__background-image {
+      transform: scale(var(--scale-value));
     }
   }
   
@@ -25,7 +44,12 @@
     background: var(--cor-fundo-500);
     overflow-y: scroll;
     transition: transform 400ms ease-in-out;
-    
+  }
+
+  &__close {
+    position: absolute;
+    top: 1.3rem;
+    right: .4rem;
   }
 
   &__title {
@@ -48,7 +72,6 @@
   }
 
   &__list {
-    border-color: 2px solid lighten($color: #4747cf, $amount: 10%);
     display: flex;
     gap: .5rem;
     overflow-x: scroll;
@@ -56,11 +79,18 @@
 
     background-color: var(--cor-fundo-600);
     padding: .4rem;
+    padding-bottom: .1rem;
     border-radius: 8px;
     border-bottom: 1px dotted var(--gradiente-remate);
 
     img {
       max-width: 36px;
+    }
+
+    &::-webkit-scrollbar {
+      &-thumb {
+        background-color: lighten(#2E2E38, 10%);
+      }
     }
   }
 
