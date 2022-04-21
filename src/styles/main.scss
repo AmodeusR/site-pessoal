@@ -22,11 +22,19 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
+.project__overlay {
+  scrollbar-width: thin;
+  scrollbar-color: var(--cor-fundo-600) var(--cor-fundo-400);
+
+}
+
 body {
   font-family: "Outfit", "Noto Sans JP", sans-serif;
   margin: 0;
   background-color: var(--cor-fundo-400);
   color: white;
+
 }
 
 img {
@@ -39,14 +47,13 @@ img {
   margin-inline: auto;
   max-width: 90%;
   width: 73em;
-  // max-width: 75%;
 }
 
 .inner-container {
   margin-inline: 2.5%;
-  // max-width: 70%;
 }
 
+// gradient in text
 .theme-container {
   background-image: var(--cor-tema);
   background-color: white;
@@ -86,4 +93,22 @@ section + section {
 ::selection {
   background: var(--gradiente-remate);
   color: white;
+}
+
+::-webkit-scrollbar {
+  width: .5em;
+  height: .3em;
+
+  &-track {
+    background-color: transparent;
+  }
+
+  &-thumb {
+    background-color: var(--cor-fundo-600);
+    border-radius: 8px;
+    
+    &:hover {
+      background-color: lighten(#2E2E38, 10%);
+    }
+  }
 }
