@@ -1,3 +1,5 @@
+@use "/src/styles/media";
+
 .about-card {
   --border-radius: 8px;
   display: flex;
@@ -15,6 +17,11 @@
     object-fit: cover;
   }
 
+  &__body {
+    display: flex;
+    flex-direction: column;
+  }
+
   --p-margin: .4rem;
   &__title {
     font-size: 1.5rem;
@@ -24,15 +31,43 @@
 
   &__description {
     color: var(--cor-neutra-600);
-    margin-block: 0;
     margin-left: calc(var(--p-margin) * 2);
+    margin-bottom: 1.5rem;
+    
+    p {
+      margin-block: 0;
+
+      &:first-of-type {
+        margin-bottom: .4rem;
+      }
+    }
+
   }
 
   &__button {
     flex-direction: row-reverse;
     max-width: 10rem;
-    align-self: flex-end;
-    margin-top: 1rem;
+    margin-top: auto;
+    margin-left: auto;
     padding-block: .8rem;
+  }
+
+  @include media.tablet {
+    flex-direction: row;
+    max-width: 46rem;
+
+    &__img {
+      max-width: 19rem;
+    }
+
+    &__title {
+      font-size: clamp(1.6rem, 3.5vw, 1.8rem);
+      margin-left: calc(var(--p-margin) * 2);
+    }
+
+    &__description {
+      margin-left: calc(var(--p-margin) * 3)
+    }
+
   }
 }
