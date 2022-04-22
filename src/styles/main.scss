@@ -2,6 +2,8 @@
   --cor-tema: linear-gradient(15deg, rgba(100,22,156,1) 20%, rgba(215,10,132,1) 100%);
   --cor-fundo-400: #131316;
   --cor-fundo-500: #1C1C22;
+
+  // Apenas sintaxe, mesmas cores
   --cor-fundo-600: #2E2E38;
   --cor-borda: #2E2E38;
 
@@ -41,6 +43,11 @@ img {
   display: block;
   width: 100%;
   height: auto;
+}
+
+strong {
+  color: var(--gradiente-remate);
+  font-weight: 600;
 }
 
 .outer-container {
