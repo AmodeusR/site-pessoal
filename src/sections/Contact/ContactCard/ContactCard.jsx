@@ -8,7 +8,7 @@ const ContactCard = () => {
 
   return (
     <div className="contact-card">
-      <h2 className="section-subtitle-l2 contact-card__title">Gostou do do que viu? Manda uma mensagem aí, então (⌐■_■)👍</h2>
+      <h2 className="section-subtitle-l2 contact-card__title">Quer que eu trabalhe pra você? Vamos conversar então :D</h2>
       <form className="contact-card__form" action="post" onSubmit={handleFormSubmit}>
         <Input title="Seu nome" type="text" name="nome" />
         <Input title="Seu e-mail" type="email" name="email" />
