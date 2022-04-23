@@ -7,7 +7,6 @@ const Knowledge = () => {
   const [apps, setApps] = useState([]);
 
   useEffect(() => {
-
     (async () => {
       const techsData = await sanityFetch("techs");
       const appsData = await sanityFetch("apps");
@@ -26,7 +25,7 @@ const Knowledge = () => {
           <h4 className="section-subtitle-l2">Tecnologias</h4>
           <div className="knowledge__techs-list">
             {techs?.map((item) => (
-              <Icon key={item.techName} src={item.imageSrc} alt={item.techName} />
+              <Icon key={item._id} src={item.imageSrc} alt={item.techName} />
             ))}
           </div>
         </div>
@@ -34,7 +33,7 @@ const Knowledge = () => {
           <h4 className="section-subtitle-l2">Programas</h4>
           <div className="knowledge__apps-list">
             {apps?.map((item) => (
-              <Icon key={item.appName} src={item.imageSrc} alt={item.appName} />
+              <Icon key={item._id} src={item.imageSrc} alt={item.appName} />
             ))}
 
           </div>
