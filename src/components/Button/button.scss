@@ -27,10 +27,14 @@
     transition: fill 250ms ease;
   }
   
+  $button-theme-color: #811dc9;
   &:hover,
   &:focus {
     cursor: pointer;
-    background: lighten(#811dc9, 12%);
+    background: lighten($button-theme-color, 12%);
+  }
+  &:active {
+    background-color: darken($color: $button-theme-color, $amount: 5%);
   }
 
   &--hollow {
@@ -46,31 +50,41 @@
       background: transparent;
       outline-color: var(--hover-color);
       color: var(--hover-color);
-
+      
       svg {
         fill: var(--hover-color);
       }
     }
+
+    &.button--disabled {
+      --color-disabled: var(--cor-neutra-400);
+      color: var(--color-disabled);
+      background-color: transparent;
+      outline-color: var(--color-disabled);  
+
+    }
   }
 
   &--disabled {
-    --color-disabled: var(--cor-neutra-400);
     cursor: none;
     pointer-events: none;
-    color: var(--color-disabled);
-    outline-color: var(--color-disabled);
-
+    background-color: var(--cor-neutra-400);
     svg {
       fill: var(--color-disabled);
     }
   }
 
   &--accent {
+    $button-theme-color: #f40b97;
     background-color: var(--gradiente-remate);
 
     &:hover,
     &:focus {
       background-color: lighten(#f40b97, 12%);
+    }
+
+    &:active {
+      background-color: darken($button-theme-color, 5%);
     }
   }
 }

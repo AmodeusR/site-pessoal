@@ -44,18 +44,10 @@
 
   label {
     color: var(--cor-neutra-600);
-    transition: 
-      transform 250ms ease,
-      font-size 250ms ease;
-      
-    &.shrink {
-      transform: translateY(-160%) translateX(-10%);
-      font-size: .8rem;
-    }
   }
 
   textarea {
-    width: 100%!important;
+    width: 100% !important;
     min-height: 20rem;
     padding: .9rem .5rem;
 
