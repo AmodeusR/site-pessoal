@@ -13,12 +13,24 @@ const builder = imageUrlBuilder(client);
 
 export const urlFor = (source) => builder.image(source);
 
-const sanityFetch = async (dataType) => {
-  const query = `*[_type == "${dataType}"] | order(order asc)`;
+const sanityFetch = async (dataType, getAll = false) => {
+  const query = `*[_type == "${dataType}" ${getAll ? "" : "&& known == true"}] | order(order asc)`;
   
   const data = client.fetch(query);
 
   return data;
+};
+
+export const sanityFetchProjects = () => {
+  const groq = `*[_type == 'projects'] {
+    _id, imageSrc, title,   "description": description[].children[].text,
+    repoLink, demoLink,
+    usedTechs[]->{_id, imageSrc, techName, order}
+  }`;
+
+  const projectsData = client.fetch(groq);
+
+  return projectsData;
 };
 
 export default sanityFetch;
