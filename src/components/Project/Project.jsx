@@ -1,45 +1,44 @@
 import { useState } from "react";
 import { Button, MobileCloseMenuIcon } from "../../components";
+import { urlFor } from "../../utils/sanityClient";
 
 import "./project.scss";
 
-const Project = () => {
-  const imgLink = "url(https://raw.githubusercontent.com/AmodeusR/FM--3-column-card/master/page-models/desktop.png)";
+const Project = ({ backgroundImage, title, description, usedTechs = [], repoLink = "#/", demoLink = "#/" }) => {
   const [overlay, setOverlay] = useState(false);
-  
+
   const handleOverlay = () => {
     setOverlay(!overlay);
   };
-  
-  const usedTechs = [
-    {image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"},
-    {image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"},
-    {image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"},
-    {image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"}
-  ];
-  
+
   return (
-    <div
-      className={`project ${overlay ? "active" : null}`} >
-      <div className="project__background-image" style={{backgroundImage: imgLink}} onClick={handleOverlay} />
+    <article className={`project ${overlay ? "active" : null}`}>
+      <div
+        className="project__background-image"
+        style={{ backgroundImage: `url(${urlFor(backgroundImage)})` }}
+        onClick={handleOverlay}
+      />
       <div className="project__overlay">
-        <MobileCloseMenuIcon className="project__close" onClick={() => setOverlay(false)} />
-        <h2 className="project__title">Meu título</h2>
-        <div className="project__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita magni facere laboriosam asperiores, in, quidem consequatur explicabo enim velit vel itaque dolorum animi. Expedita non enim quod sed, amet maiores.</div>
+        <MobileCloseMenuIcon
+          className="project__close"
+          onClick={() => setOverlay(false)}
+        />
+        <h2 className="project__title">{title}</h2>
+        <div className="project__description">{description}</div>
         <div className="project__used-techs">
           <h3>Techs usadas</h3>
           <div className="project__list">
-            {usedTechs.map((usedTech, i) => (
-              <img src={usedTech.image} alt="image" key={i} />
+            {usedTechs.map(usedTech => (
+              <img src={urlFor(usedTech.imageSrc)} alt={usedTech.techName} key={usedTech._id} />
             ))}
           </div>
         </div>
         <div className="project__cta">
-          <Button title="Ver repo" className="button--hollow" />
-          <Button title="Ver site" className="button--accent" />
+          <Button title="Ver repo" className="button--hollow" onClick={() => window.open(repoLink, "_blank")} />
+          <Button title="Ver site" className="button--accent" onClick={() => window.open(demoLink, "_blank")} />
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 
