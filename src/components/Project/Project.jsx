@@ -12,7 +12,7 @@ const Project = ({ backgroundImage, title, description, usedTechs = [], repoLink
   };
 
   return (
-    <article className={`project ${overlay ? "active" : null}`}>
+    <article className={`project ${overlay ? "active" : ""}`}>
       <div
         className="project__background-image"
         style={{ backgroundImage: `url(${urlFor(backgroundImage)})` }}
