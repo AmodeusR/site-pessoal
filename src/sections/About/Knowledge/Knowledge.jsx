@@ -10,11 +10,10 @@ const Knowledge = () => {
     (async () => {
       const techsData = await sanityFetch("techs");
       const appsData = await sanityFetch("apps");
+
       setTechs(techsData);
       setApps(appsData);
-
     })();
-
   }, []);
 
   return (
@@ -25,7 +24,12 @@ const Knowledge = () => {
           <h4 className="section-subtitle-l2">Tecnologias</h4>
           <div className="knowledge__techs-list">
             {techs?.map((item) => (
-              <Icon key={item._id} src={item.imageSrc} alt={item.techName} />
+              <Icon
+                key={item._id}
+                src={item.imageSrc}
+                alt={item.techName}
+                linkRef={item.linkRef}
+              />
             ))}
           </div>
         </div>
@@ -33,9 +37,13 @@ const Knowledge = () => {
           <h4 className="section-subtitle-l2">Programas</h4>
           <div className="knowledge__apps-list">
             {apps?.map((item) => (
-              <Icon key={item._id} src={item.imageSrc} alt={item.appName} />
+              <Icon
+                key={item._id}
+                src={item.imageSrc}
+                alt={item.appName}
+                linkRef={item.linkRef}
+              />
             ))}
-
           </div>
         </div>
       </div>
