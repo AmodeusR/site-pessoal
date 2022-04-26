@@ -32,7 +32,7 @@ const Projects = () => {
           />
         ))}
       </div>
-      <Button title="Mais projetos" className="projects__button" />
+      <Button title="Mais projetos" className="projects__button button--disabled" />
     </section>
   );
 };
