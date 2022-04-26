@@ -54,7 +54,7 @@ const ContactCard = () => {
   return (
     <div className="contact-card">
       <h2 className="section-subtitle-l2 contact-card__title">
-        Quer que eu trabalhe pra você? Vamos conversar então :D
+        Quer que eu trabalhe pra você? Só mandar uma mensagem ;)
       </h2>
       <form
         className="contact-card__form"
