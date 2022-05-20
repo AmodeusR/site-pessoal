@@ -1,0 +1,16 @@
+.projects {
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  &__button {
+    margin-top: 2rem;
+    width: max-content;
+    padding-inline: 2rem; 
+    margin-inline: auto;
+  }
+}

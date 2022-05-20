@@ -1,0 +1,91 @@
+@use "/src/styles/mixins" as mix;
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;  
+  padding: 1.1em .5em;
+  width: 100%;
+  background: var(--gradiente-origem);
+  
+  font-family: "Outfit", sans-serif;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+
+  border: none;
+  border-radius: .3rem;
+
+  transition:
+    color 250ms ease,
+    outline-color 250ms ease,
+    background-color 250ms ease;
+
+  svg {
+    fill: var(--cor-neutra-600);
+    transition: fill 250ms ease;
+  }
+  
+  $button-theme-color: #811dc9;
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    background: lighten($button-theme-color, 12%);
+  }
+  &:active {
+    background-color: darken($color: $button-theme-color, $amount: 5%);
+  }
+
+  &--hollow {
+    cursor: pointer;
+    background: transparent;
+    color: var(--cor-neutra-600);
+    outline: 2px solid var(--cor-neutra-600);
+    outline-offset: -2px;
+    
+    &:hover,
+    &:focus {
+      --hover-color: white;
+      background: transparent;
+      outline-color: var(--hover-color);
+      color: var(--hover-color);
+      
+      svg {
+        fill: var(--hover-color);
+      }
+    }
+
+    &.button--disabled {
+      --color-disabled: var(--cor-neutra-400);
+      color: var(--color-disabled);
+      background-color: transparent;
+      outline-color: var(--color-disabled);  
+
+    }
+  }
+
+  &--disabled {
+    cursor: none;
+    pointer-events: none;
+    background-color: var(--cor-neutra-400);
+    color: #ddd;
+    svg {
+      fill: var(--color-disabled);
+    }
+  }
+
+  &--accent {
+    $button-theme-color: #f40b97;
+    background-color: var(--gradiente-remate);
+
+    &:hover,
+    &:focus {
+      background-color: lighten(#f40b97, 12%);
+    }
+
+    &:active {
+      background-color: darken($button-theme-color, 5%);
+    }
+  }
+}

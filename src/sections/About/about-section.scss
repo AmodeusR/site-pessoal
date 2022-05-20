@@ -1,0 +1,40 @@
+@use "/src/styles/media";
+
+.about-card {
+  margin-inline: auto;
+}
+
+
+.knowledge {
+  text-align: center;
+  h4 {
+    margin-top: 0;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin-inline: auto;
+    gap: 3rem;
+    
+    @include media.tablet {
+      flex-direction: row;
+    }
+  }
+  
+  &__techs-list,
+  &__apps-list {
+    display: flex;
+    justify-content: center;
+    gap: .8rem;
+    flex-wrap: wrap;
+    max-width: 25em;
+    
+    img {
+      width: clamp(48px, 6vw, 64px);
+      height: clamp(48px, 6vw, 64px);
+    }
+  }
+}

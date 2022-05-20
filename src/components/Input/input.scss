@@ -1,0 +1,57 @@
+@mixin input-style {
+
+  font-family: "Outfit";
+  font-size: 1.2rem;
+
+  color: var(--cor-neutra-600);
+  background-color: var(--cor-fundo-600);
+  border: none;
+  border-radius: 8px;
+
+  transition:
+    border-color 200ms ease,
+    background-color 200ms ease;
+  border-bottom: 2px dotted transparent;
+  outline: none;
+
+ 
+  &:focus {
+   border-color: var(--gradiente-remate);
+   
+   background-color: lighten(#2E2E38, 5%);
+  }
+}
+
+.inputlabel {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+
+
+  
+  input {
+    color: var(--cor-neutra-600);
+    padding: .9rem .5rem;
+    font-size: 1.2rem;
+    background-color: var(--cor-fundo-600);
+    border: none;
+    border-radius: 8px;
+
+    @include input-style;
+
+  }
+  
+
+  label {
+    color: var(--cor-neutra-600);
+  }
+
+  textarea {
+    width: 100% !important;
+    min-height: 20rem;
+    padding: .9rem .5rem;
+
+    resize: none;
+    @include input-style;
+  }
+}

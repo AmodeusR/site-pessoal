@@ -1,0 +1,34 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  gap: 2rem;
+
+  text-align: center;
+
+  &__title {
+    font-size: clamp(2.7rem, 6vw, 5rem);
+    margin: 0;
+  }
+
+  &__description {
+    font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+    color: var(--cor-neutra-600);
+  }
+
+  &__cta {
+    display: flex;
+    width: min(100%, 28rem);
+    gap: 2rem;
+  }
+}
+
+#link-project {
+  display: contents;
+}
+
+.modular-text {
+  color: var(--gradiente-origem);
+}

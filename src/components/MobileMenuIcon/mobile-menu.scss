@@ -1,0 +1,47 @@
+
+.mobile-menu {
+  $width: 1.2rem;
+  $height: .175rem;
+  $distance: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: $distance;
+  cursor: pointer;
+  z-index: 2;
+  position: relative;
+  border: none;
+  background: none;
+  
+  &__middle-line,
+  &__top-line,
+  &__bottom-line {
+    width: $width;
+    height: $height;
+    background-color: var(--cor-neutra-600);
+    border-radius: 1rem;
+    transition: background-color 250ms ease,
+    width 250ms ease-out;
+  }
+
+  &__top-line {
+    width: .85rem;
+  }
+
+  &__bottom-line {
+    width: .5rem;
+  }
+
+  &:hover {
+    & > * {
+      background: white;
+    }
+
+    .mobile-menu {
+      &__top-line,
+      &__bottom-line {
+        width: 100%;
+      }
+    }
+  }
+}

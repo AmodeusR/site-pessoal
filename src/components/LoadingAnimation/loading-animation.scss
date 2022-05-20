@@ -1,0 +1,16 @@
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .3rem;
+  margin-bottom: -6px;
+
+  &__circles {
+    --size: 8px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 2rem;
+    background-color: white;
+    margin-block: .57rem;
+  }
+}
