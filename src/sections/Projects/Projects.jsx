@@ -32,7 +32,7 @@ const Projects = () => {
           />
         ))}
       </div>
-      <Button title="Mais projetos" className="projects__button button--disabled" />
+      <Button title="Mais projetos" className="projects__button" onClick={() => window.open("https://github.com/AmodeusR/repositorio-geral/blob/main/README.md", "_blank")} />
     </section>
   );
 };
