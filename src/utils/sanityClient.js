@@ -22,7 +22,7 @@ const sanityFetch = async (dataType, getAll = false) => {
 };
 
 export const sanityFetchProjects = () => {
-  const groq = `*[_type == 'projects'] {
+  const groq = `*[_type == 'projects' && !(_id in path("drafts.**"))] {
     _id, imageSrc, title, order, "description": description[].children[].text,
     repoLink, demoLink,
     usedTechs[]->{_id, imageSrc, order, techName} | order(order asc)

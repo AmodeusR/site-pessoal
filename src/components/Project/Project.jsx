@@ -15,7 +15,7 @@ const Project = ({ backgroundImage, title, description, usedTechs = [], repoLink
     <article className={`project ${overlay ? "active" : ""}`}>
       <div
         className="project__background-image"
-        style={{ backgroundImage: `url(${urlFor(backgroundImage)})` }}
+        style={{ backgroundImage: `url(${backgroundImage && urlFor(backgroundImage)})` }}
         onClick={handleOverlay}
       />
       <div className="project__overlay">
