@@ -16,7 +16,7 @@ const Hero = () => {
         <a href="#projetos" id="link-project">
           <Button title="Projetos" onClick={() => document.getElementById("projects").scrollIntoView()} />
         </a>
-        <Button title="Baixar CV" className="button--hollow" icon="download" onClick={() => window.open("https://bit.ly/CurriculumAR", "_blank")} />
+        <Button title="Baixar CV" className="button--hollow" icon="download" onClick={() => window.open("https://bit.ly/CurriculumRM10", "_blank")} />
       </div>
     </main>
   );
